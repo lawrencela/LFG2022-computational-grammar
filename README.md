@@ -1,4 +1,4 @@
-# LFG/XLE Grammar for Chinese
+# LFG/XLE Grammars for Chinese
 
 Author: Chit Fung LAM (Lawrence)
 
