@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>grammar1.lfg</title>
+</head>
+
+<body>
+<pre>
+DEMO   CHINESE   CONFIG (1.0)
+  ROOTCAT   IP.
+  FILES  .
+  LEXENTRIES   (DEMO CHINESE).
+  TEMPLATES (DEMO CHINESE). 
+  RULES   (DEMO CHINESE).
+  MORPHOLOGY (DEMO CHINESE).
+  GOVERNABLERELATIONS    SUBJ OBJ OBJ2 COMP XCOMP OBL OBL-?+.
+  SEMANTICFUNCTIONS    ADJUNCT  TOPIC FOCUS DIS  POSS STANDARD.
+  NONDISTRIBUTIVES    NUM PERS CONJ-FORM.
+  EPSILON   e.
+  OPTIMALITYORDER NOGOOD.
+
+----
+
+DEMO CHINESE MORPHOLOGY (1.0)
+
+TOKENIZE:
+P!basic-parse-tok.fst G!default-gen-tokenizer.fst
+
+----
+
+DEMO   CHINESE   RULES (1.0)
+
+"Phrase-structural rules for inner topicalisation / complementation"
+
+
+   IP --> (DP: (^ SUBJ)=!) "Remember to change ROOTCAT in configuration to IP"
+ 	  I': ^=!;
+	 { (PERIOD) "for punctuation, optional for now"
+	 | (EXCL)
+	 | (QM)
+	 }. 
+
+"The two disjunctive options below ensure that inner top is at I'-adjoining position"
+   I' --> { DP: ! $ (^DIS)
+                (^{XCOMP: (-> INTOP); |COMP: (-> INTOP);}* OBJ) = !; "off-path constaints on functional uncertainty for inner top."
+            I': ^=!
+          | (I)
+            VP: ^=!
+	  }.
+
+
+   VP --> V': ^=!.
+
+	 
+   V' --> { AdvP: ! $ (^ADJUNCT); "Chinese -- AdvP as an adjunct"
+            V': ^=!
+	  |	  
+            V: ^=!; 
+ 	    (DP: (^OBJ)=!)  "direct object"
+	    ( {IP: (^{XCOMP: ~(-> RESTR); |COMP: ~(-> RESTR)})=!
+	      |IP[-INTOP]: (^XCOMP: ~(-> RESTR))=!
+	      |VP[+RESTR]: (^{XCOMP: (-> RESTR); |COMP: (-> RESTR);}) = !
+	      }
+	    )
+          }.
+	  
+   VP[+RESTR] --> V'[+RESTR]: ^=!.
+                  
+   V'[+RESTR] --> { AdvP: ! $ (^ADJUNCT); "Chinese -- AdvP as an adjunct"
+                    V'[+RESTR]: ^=!
+		  | V: ^=!;
+		    (DP: (^OBJ)=!)
+		  }.
+
+   IP[-INTOP] --> I'[-INTOP]: ^=!.
+
+
+   I'[-INTOP] --> (I)
+                  VP: ^=!.
+
+
+   DP --> (D)
+ 	  AP*: ! $ (^ ADJUNCT); "introducing adjectives in sets"
+ 	  N: ^=!;
+	  PP*: ! $ (^ ADJUNCT).
+	  
+	  
+   AdvP --> Adv*: ! $ (^ ADJUNCT); "AdvP taking Adv as adjunct"
+   	    Adv:^=!.
+
+
+
+----
+DEMO   CHINESE   TEMPLATES (1.0)
+
+"Templates important for Chinese inner topicalisation"
+
+   PRED(P) = (^ PRED) = 'P'.
+
+   ASP(P) = (^ ASPECT) = 'P'.
+
+
+   DEMONSTRATIVE(P D) = (^ SPEC DET PRED) = 'P'
+                        (^ SPEC DET DET-TYPE) = 'DEMONSTRATIVE'
+			(^ SPEC DET DEIXIS) = 'D'.
+			
+   TRANS(P) = {(^ PRED)='P<(^ SUBJ) (^ OBJ)>'
+	      |(^ PRED)='P<(^ SUBJ) (^ OBJ)>'
+                (^ SUBJ PRED) = 'PRO'     "this disjunctive option is for pro-drop"
+	      }.
+
+   EC-SUBJ(P) = (^ PRED) = 'P<(^ SUBJ)(^ XCOMP)>'
+   	        (^ SUBJ) = (^ XCOMP SUBJ).
+
+   PC-SUBJ(P) = (^ PRED) = 'P<(^ SUBJ)(^ COMP)>'
+                (^ COMP SUBJ PRED) = 'PRO'.
+   
+   VCOMP(P) =  {(^ PRED) = 'P<(^ SUBJ)(^ COMP)>'
+	       |(^ PRED) = 'P<(^ SUBJ)(^ COMP)>'
+                (^ SUBJ PRED) = 'PRO'     "this disjunctive option is for pro-drop"
+	       }.
+
+   EC-InTop = (^XCOMP INTOP) = +
+              @(CAT (^XCOMP) {IP[-INTOP] VP[+RESTR]}). "CAT predicate; XCOMP corresponds to IP[-INTOP] or VP"
+
+
+   PC-InTop = (^COMP INTOP) = +.
+
+   ASPECT-C-PERF = { (^{XCOMP|COMP} ASPECT) =c perfective "Aspect under Control-Perfective; implicational constraint"
+                     (^{XCOMP|COMP} RESTR)= +
+                   | (^{XCOMP|COMP} ASPECT) ~= perfective
+
+		   }.
+
+   ASPECT-C-EXP = { (^{XCOMP|COMP} ASPECT) =c experiential "Aspect under Control-Experiential; implicational constraint"
+                     (^{XCOMP|COMP} RESTR)= +
+                   | (^{XCOMP|COMP} ASPECT) ~= experiential
+                   }.
+		   
+----
+
+DEMO CHINESE LEXICON (1.0)
+
+"nouns"
+
+gongzuo N *  @(PRED task).
+
+xiaoming N *  @(PRED Xiaoming).
+
+"adverbs"
+
+mingtian Adv * @(PRED tomorrow).
+
+"demonstratives and classifiers"
+
+zhexiang D * @(DEMONSTRATIVE this proximal).
+
+"simple verbs"
+
+wancheng V * @(TRANS finish).
+
+wancheng-le V *  @(TRANS finish)
+                @(ASP perfective).
+
+wancheng-guo V *  @(TRANS finish)
+                @(ASP experiential).
+
+"control/complementation verbs"
+
+shefa V * @(EC-SUBJ try)
+          @(EC-InTop)
+	  @(ASPECT-C-PERF)
+	  @(ASPECT-C-EXP).
+
+dasuan V * @(PC-SUBJ intend)
+           @(PC-InTop)
+	   @(ASPECT-C-PERF)
+	   @(ASPECT-C-EXP).
+
+xiangxin V * @(VCOMP believe).
+
+
+"punctuation"
+
+. PERIOD * (^ STMT-TYPE) = declarative.
+
+, COMMA *.
+
+! EXCL * (^ STMT-TYPE) = exclamation.
+
+? QM * (^STMT-TYPE) = interrogative.
+
+
+----
+
+</pre>
+</body>
+</html>

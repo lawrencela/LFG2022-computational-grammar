@@ -1,0 +1,74 @@
+#This is the testsuite for restructuring.lfg, created in April 2022 to parse Chinese inner topicalisation
+
+#basic SVO
+
+xiaoming mingtian wancheng zhexiang gongzuo
+
+"xiaoming tomorrow finish this task"
+
+
+
+#complementation without inner topicalisation
+
+xiaoming shefa mingtian wancheng zhexiang gongzuo
+
+"Xiaoming try tomorrow finish this task"
+
+xiaoming dasuan mingtian wancheng zhexiang gongzuo
+
+"Xiaoming intend tomorrow finish this task"
+
+xiaoming xiangxin mingtian wancheng zhexiang gongzuo
+
+"Xiaoming believe tomorrow finish this task"
+
+
+
+#complementation (Aspect under Control -- Restructuring)
+
+xiaoming shefa wancheng-le zhexiang gongzuo
+
+"Xiaoming try finish-perfective this task"
+
+xiaoming shefa wancheng-guo zhexiang gongzuo
+
+"Xiaoming try finish-experiential this task"
+
+
+#inner topicalisation (without Aspect under Control)
+
+xiaoming zhexiang gongzuo shefa mingtian wancheng
+
+"Xiaoming this task try tomorrow finish"
+
+xiaoming zhexiang gongzuo dasuan mingtian wancheng
+
+"Xiaoming this task intend tomorrow finish"
+
+xiaoming dasuan zhexiang gongzuo mingtian wancheng
+
+"Xiaoming intend this task tomorrow finish"
+
+xiaoming xiangxin zhexiang gongzuo mingtian wancheng
+
+"Xiaoming believe this task tomorrow finish"
+
+
+#inner topicalisation (with Aspect under Control)
+
+xiaoming zhexiang gongzuo shefa wancheng-guo
+
+"Xiaoming this task try finish-experiential"
+
+
+
+
+#the following sentences should NOT work
+
+xiaoming shefa zhexiang gongzuo mingtian wancheng
+
+"*Xiaoming try this task tomorrow finish"
+
+xiaoming zhexiang gongzuo xiangxin mingtian wancheng
+
+"*Xiaoming this task believe tomorrow finish"
