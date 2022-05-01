@@ -17,9 +17,12 @@ Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Archit
 Important files in the directory
 --------------------------------
 1. restructuring.lfg
+
 This is the LFG grammar to be run by XLE.
 A html version is also included for displaying the content using a web browser.
+
 2. testsuite.lfg
+
 This testsuite contains the essential sentences to be parsed by the LFG grammar.
 A html version is also included for displaying the content using a web browser.
 
