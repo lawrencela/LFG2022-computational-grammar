@@ -26,7 +26,7 @@ Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Archit
 
   Coverage of restructuring.lfg
   -----------------
-  This is a small LFG grammar designed to parse the following sentence structures:
+  This is a small LFG grammar designed to parse the following sentence structures. See testsuite.lfg for the relevant exmaple sentences which illustrate the structures.
 
   1. Simple SVO
   2. Exhaustive control without Inner Topicalisation
