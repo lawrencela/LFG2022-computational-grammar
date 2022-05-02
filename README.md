@@ -6,7 +6,7 @@ This project contains LFG grammar fragments developed in the Lexical-Functional 
 
 LFG/XLE Grammar for Chinese Aspect under Control and Inner Topicalisation
 -------------------------------------------------------------------------
-This directory contains an LFG grammar implemented via the Xeror Linguistic Environment (XLE) to model two linguistic phenomena in Mandarin Chinese -- Aspect under Control and Inner Topicalisation.
+This directory contains an LFG grammar implemented via the Xeror Linguistic Environment (XLE) to model two linguistic phenomena in Mandarin Chinese, namely Aspect under Control and Inner Topicalisation.
 
 For reference to this grammar, please cite:
 
