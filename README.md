@@ -12,30 +12,30 @@ For reference to this grammar, please cite:
 
 Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Architecture: Re-analysis of Two “Restructuring” Phenomena in Mandarin Chinese’. Conference paper presented at the 27th International Lexical-Functional Grammar Conference (LFG’22), University of Groningen, July 12-14.
 
-Important files in the directory
---------------------------------
-1. restructuring.lfg
+  Important files in the directory
+  --------------------------------
+  1. restructuring.lfg
 
-This is the LFG grammar to be run by XLE.
-A html version is also included for displaying the content using a web browser.
+  This is the LFG grammar to be run by XLE.
+  A html version is also included for displaying the content using a web browser.
 
-2. testsuite.lfg
+  2. testsuite.lfg
 
-This testsuite contains the essential sentences to be parsed by the LFG grammar.
-A html version is also included for displaying the content using a web browser.
+  This testsuite contains the essential sentences to be parsed by the LFG grammar.
+  A html version is also included for displaying the content using a web browser.
 
-Coverage of restructuring.lfg
------------------
-This is a small LFG grammar. It contains 10 lexical items. This LFG grammar parses the following sentence structures:
+  Coverage of restructuring.lfg
+  -----------------
+  This is a small LFG grammar. It contains 10 lexical items. This LFG grammar parses the following sentence structures:
 
-1. Simple SVO
-2. Exhaustive control without Inner Topicalisation
-3. Partial control without Inner Topicalisation
-4. Non-control without Inner Topicalisation
-5. Exhaustive control with Inner Topicalisation
-6. Partial control with Inner Topicalisation
-7. Non-control with Inner Topicalisation
-8. Exhaustive control with Aspect under Control
-9. Partial control with Aspect under Control
-10. Exhaustive control with Inner Topicalisation and Aspect under Control
-11. Partial control with Inner Topicalisation and Aspect under Control
+  1. Simple SVO
+  2. Exhaustive control without Inner Topicalisation
+  3. Partial control without Inner Topicalisation
+  4. Non-control without Inner Topicalisation
+  5. Exhaustive control with Inner Topicalisation
+  6. Partial control with Inner Topicalisation
+  7. Non-control with Inner Topicalisation
+  8. Exhaustive control with Aspect under Control
+  9. Partial control with Aspect under Control
+  10. Exhaustive control with Inner Topicalisation and Aspect under Control
+  11. Partial control with Inner Topicalisation and Aspect under Control
