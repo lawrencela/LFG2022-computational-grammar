@@ -25,16 +25,16 @@ DEMO   CHINESE   RULES (1.0)
 "Phrase-structural rules for inner topicalisation / complementation"
 
 
-   IP --> (DP: (^ SUBJ)=!) "Remember to change ROOTCAT in configuration to IP"
+   IP --> (DP: (^ SUBJ)=!)
  	  I': ^=!;
-	 { (PERIOD) "for punctuation, optional for now"
+	 { (PERIOD)
 	 | (EXCL)
 	 | (QM)
 	 }. 
 
 "The two disjunctive options below ensure that inner top is at I'-adjoining position"
    I' --> { DP: ! $ (^DIS)
-                (^{XCOMP: (-> INTOP); |COMP: (-> INTOP);}* OBJ) = !; "off-path constaints on functional uncertainty for inner top."
+                (^{XCOMP: (-> INTOP); |COMP: (-> INTOP);}* OBJ) = !;
             I': ^=!
           | (I)
             VP: ^=!
@@ -44,11 +44,11 @@ DEMO   CHINESE   RULES (1.0)
    VP --> V': ^=!.
 
 	 
-   V' --> { AdvP: ! $ (^ADJUNCT); "Chinese -- AdvP as an adjunct"
+   V' --> { AdvP: ! $ (^ADJUNCT);
             V': ^=!
 	  |	  
             V: ^=!; 
- 	    (DP: (^OBJ)=!)  "direct object"
+ 	    (DP: (^OBJ)=!)
 	    ( {IP: (^{XCOMP: ~(-> RESTR); |COMP: ~(-> RESTR)})=!
 	      |IP[-INTOP]: (^XCOMP: ~(-> RESTR))=!
 	      |VP[+RESTR]: (^{XCOMP: (-> RESTR); |COMP: (-> RESTR);}) = !
@@ -58,7 +58,7 @@ DEMO   CHINESE   RULES (1.0)
 	  
    VP[+RESTR] --> V'[+RESTR]: ^=!.
                   
-   V'[+RESTR] --> { AdvP: ! $ (^ADJUNCT); "Chinese -- AdvP as an adjunct"
+   V'[+RESTR] --> { AdvP: ! $ (^ADJUNCT);
                     V'[+RESTR]: ^=!
 		  | V: ^=!;
 		    (DP: (^OBJ)=!)
@@ -72,12 +72,12 @@ DEMO   CHINESE   RULES (1.0)
 
 
    DP --> (D)
- 	  AP*: ! $ (^ ADJUNCT); "introducing adjectives in sets"
+ 	  AP*: ! $ (^ ADJUNCT);
  	  N: ^=!;
 	  PP*: ! $ (^ ADJUNCT).
 	  
 	  
-   AdvP --> Adv*: ! $ (^ ADJUNCT); "AdvP taking Adv as adjunct"
+   AdvP --> Adv*: ! $ (^ ADJUNCT);
    	    Adv:^=!.
 
 
@@ -118,13 +118,13 @@ DEMO   CHINESE   TEMPLATES (1.0)
 
    PC-InTop = (^COMP INTOP) = +.
 
-   ASPECT-C-PERF = { (^{XCOMP|COMP} ASPECT) =c perfective "Aspect under Control-Perfective; implicational constraint"
+   ASPECT-C-PERF = { (^{XCOMP|COMP} ASPECT) =c perfective "Aspect under Control-Perfective"
                      (^{XCOMP|COMP} RESTR)= +
                    | (^{XCOMP|COMP} ASPECT) ~= perfective
 
 		   }.
 
-   ASPECT-C-EXP = { (^{XCOMP|COMP} ASPECT) =c experiential "Aspect under Control-Experiential; implicational constraint"
+   ASPECT-C-EXP = { (^{XCOMP|COMP} ASPECT) =c experiential "Aspect under Control-Experiential"
                      (^{XCOMP|COMP} RESTR)= +
                    | (^{XCOMP|COMP} ASPECT) ~= experiential
                    }.
