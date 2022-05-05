@@ -1,4 +1,4 @@
-#This is the testsuite for restructuring.lfg, created in April 2022 to parse Chinese sentences with Aspect under Control and  Inner Topicalisation
+#This is the testsuite for restructuring.lfg, created in April 2022 to parse Chinese control structures with Aspect under Control and Inner Topicalisation
 
 #basic SVO
 
@@ -8,7 +8,7 @@ xiaoming mingtian wancheng zhexiang gongzuo
 
 
 
-#complementation without inner topicalisation
+#control structures (exhaustive, partial, non-control) without Inner Topicalisation
 
 xiaoming shefa mingtian wancheng zhexiang gongzuo
 
@@ -24,7 +24,7 @@ xiaoming xiangxin mingtian wancheng zhexiang gongzuo
 
 
 
-#complementation (Aspect under Control -- Restructuring)
+#control structures with Aspect under Control
 
 xiaoming shefa wancheng-le zhexiang gongzuo
 
@@ -35,7 +35,8 @@ xiaoming shefa wancheng-guo zhexiang gongzuo
 "Xiaoming try finish-experiential this task"
 
 
-#inner topicalisation (without Aspect under Control)
+
+#control structures (exhaustive, partial, non-control) with Inner Topicalisation (without Aspect under Control)
 
 xiaoming zhexiang gongzuo shefa mingtian wancheng
 
@@ -54,13 +55,11 @@ xiaoming xiangxin zhexiang gongzuo mingtian wancheng
 "Xiaoming believe this task tomorrow finish"
 
 
-#inner topicalisation (with Aspect under Control)
+#control structure (exhaustive) with Inner Topicalisation (with Aspect under Control)
 
 xiaoming zhexiang gongzuo shefa wancheng-guo
 
 "Xiaoming this task try finish-experiential"
-
-
 
 
 #the following sentences should NOT work
