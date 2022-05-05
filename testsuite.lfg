@@ -8,7 +8,7 @@ xiaoming mingtian wancheng zhexiang gongzuo
 
 
 
-#control structures (exhaustive, partial, non-control) without Inner Topicalisation
+#control (exhaustive, partial) and non-control structures
 
 xiaoming shefa mingtian wancheng zhexiang gongzuo
 
@@ -36,7 +36,7 @@ xiaoming shefa wancheng-guo zhexiang gongzuo
 
 
 
-#control structures (exhaustive, partial, non-control) with Inner Topicalisation (without Aspect under Control)
+#control (exhaustive, partial) and non-control structures with Inner Topicalisation
 
 xiaoming zhexiang gongzuo shefa mingtian wancheng
 
@@ -55,7 +55,7 @@ xiaoming xiangxin zhexiang gongzuo mingtian wancheng
 "Xiaoming believe this task tomorrow finish"
 
 
-#control structure (exhaustive) with Inner Topicalisation (with Aspect under Control)
+#control structure (exhaustive) with Inner Topicalisation and Aspect under Control
 
 xiaoming zhexiang gongzuo shefa wancheng-guo
 
