@@ -29,9 +29,9 @@ Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Archit
   This is a small LFG grammar designed to parse the following sentence structures. See testsuite.lfg for the relevant example sentences.
 
   1. Simple SVO
-  2. Exhaustive control without Inner Topicalisation
-  3. Partial control without Inner Topicalisation
-  4. Non-control without Inner Topicalisation
+  2. Exhaustive control
+  3. Partial control
+  4. Non-control
   5. Exhaustive control with Inner Topicalisation
   6. Partial control with Inner Topicalisation
   7. Non-control with Inner Topicalisation
