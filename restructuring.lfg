@@ -85,8 +85,6 @@ DEMO   CHINESE   RULES (1.0)
 ----
 DEMO   CHINESE   TEMPLATES (1.0)
 
-"Templates important for Chinese inner topicalisation"
-
    PRED(P) = (^ PRED) = 'P'.
 
    ASP(P) = (^ ASPECT) = 'P'.
