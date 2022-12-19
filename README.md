@@ -23,19 +23,3 @@ Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Archit
   
   This testsuite contains the essential sentences to be parsed by the LFG grammar.
   A html version is also included for displaying the content using a web browser.
-
-  Coverage of restructuring.lfg
-  -----------------
-  This is a small LFG grammar designed to parse the following sentence structures. See testsuite.lfg for the relevant example sentences.
-
-  1. Simple SVO
-  2. Exhaustive control
-  3. Partial control
-  4. Non-control
-  5. Exhaustive control with Inner Topicalisation
-  6. Partial control with Inner Topicalisation
-  7. Non-control with Inner Topicalisation
-  8. Exhaustive control with Aspect under Control
-  9. Partial control with Aspect under Control
-  10. Exhaustive control with Inner Topicalisation and Aspect under Control
-  11. Partial control with Inner Topicalisation and Aspect under Control
