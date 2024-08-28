@@ -8,7 +8,7 @@ LFG/XLE Grammar for Chinese Aspect under Control and Inner Topicalisation
 -------------------------------------------------------------------------
 This directory contains a small LFG grammar developed via the Xerox Linguistic Environment (XLE) to computationally implement the theoretical analysis of two linguistic phenomena in Mandarin Chinese, namely Aspect under Control and Inner Topicalisation.
 
-For reference to this grammar, please cite:
+To refer to this grammar, please cite:
 
 Lam, Chit Fung. 2022. ‘Control Complements in Parallel Constraint-based Architecture: Re-analysis of Two “Restructuring” Phenomena in Mandarin Chinese’. Conference paper presented at the 27th International Lexical-Functional Grammar Conference (LFG’22), University of Groningen, July 12-14.
 
