@@ -1,8 +1,8 @@
-# LFG/XLE Grammars for Chinese
+# LFG/XLE Grammar for Mandarin Chinese (LFG2022 Conference Presentation)
 
 Author: Chit Fung LAM (Lawrence)
 
-This project contains grammar fragments developed in the Lexical-Functional Grammar (LFG) formalism. They are implemented in the Xerox Linguistic Environment (XLE) to computationally model syntactic analyses of linguistic phenomena in Mandarin Chinese. See https://ling.sprachwiss.uni-konstanz.de/pages/xle/ for more information about grammar engineering via XLE, including how to download and use XLE.
+This repository contains a grammar fragment developed in the Lexical-Functional Grammar (LFG) formalism in 2022. They are implemented in the Xerox Linguistic Environment (XLE) to computationally model syntactic analyses of linguistic phenomena in Mandarin Chinese. See https://ling.sprachwiss.uni-konstanz.de/pages/xle/ for more information about grammar engineering via XLE, including how to download and use XLE.
 
 LFG/XLE Grammar for Chinese Aspect under Control and Inner Topicalisation
 -------------------------------------------------------------------------
