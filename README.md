@@ -1,4 +1,4 @@
-# LFG/XLE Grammar for Mandarin Chinese (LFG2022 Conference Presentation)
+# LFG/XLE Grammar Fragment for Mandarin Chinese (LFG2022 Conference Presentation)
 
 Author: Chit Fung LAM (Lawrence)
 
@@ -6,7 +6,7 @@ This repository contains a grammar fragment developed in the Lexical-Functional 
 
 LFG/XLE Grammar for Chinese Aspect under Control and Inner Topicalisation
 -------------------------------------------------------------------------
-This directory contains a small LFG grammar developed via the Xerox Linguistic Environment (XLE) to computationally implement the theoretical analysis of two linguistic phenomena in Mandarin Chinese, namely Aspect under Control and Inner Topicalisation.
+This LFG grammar was developed using the Xerox Linguistic Environment (XLE) to computationally implement the theoretical analysis of two linguistic phenomena in Mandarin Chinese, namely Aspect under Control and Inner Topicalisation.
 
 To refer to this grammar, please cite:
 
